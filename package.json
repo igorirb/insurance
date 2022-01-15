@@ -1,0 +1,29 @@
+{
+  "name": "insurance-gerald",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"ERROR: no tests specified\" && exit 1",
+    "start": "nodemon ./server.js",
+    "lint": "./node_modules/.bin/eslint src/**"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "dotenv": "^12.0.3",
+    "express": "^4.17.2",
+    "joi": "^17.5.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "nodemon": "^2.0.15",
+    "require-all": "^3.0.0",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.6.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4"
+  }
+}
