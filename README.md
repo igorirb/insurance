@@ -23,7 +23,7 @@ yarn
 
 ### Environment Variables
 
-Before running the app, please set the environment variables using the sample file ".env.sample".
+Before running the app, please set the environment variables using the sample file `.env.sample`.
 
 ```sh
 PORT=XXXX
@@ -37,7 +37,7 @@ Now you're ready to launch the app.
 yarn start
 ```
 
-The app will be available on the port you selected. To read the documentation and the available endpoints, please access the url below:
+The app will be available on the port you chose on your `.env` file. To read the documentation and the available endpoints, please access the url below:
 
 ```sh
 http://localhost:{PORT}/docs
