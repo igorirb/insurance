@@ -1,6 +1,7 @@
 const chai = require('chai');
 const sinonChai = require('sinon-chai');
-const utils = require('../../../src/utils/insurance');
+
+const { insurance } = require('../../../src/utils');
 
 chai.use(sinonChai);
 
@@ -20,7 +21,7 @@ describe('src/utils/insurance', () => {
 
   describe('processRiskProfile()', () => {
     it('should process risk profile', () => {
-      const result = utils.processRiskProfile(input);
+      const result = insurance.processRiskProfile(input);
       expect(result).to.be.deep.equal({
         auto: 'regular',
         disability: 'ineligible',
