@@ -14,8 +14,7 @@
     "rules": {
         "no-param-reassign": 0,
         "camelcase": 0,
-        "mocha/no-mocha-arrows": 0,
-        "no-unused-expressions": 0
+        "mocha/no-mocha-arrows": 0
     },
     "plugins": [
         "mocha",
