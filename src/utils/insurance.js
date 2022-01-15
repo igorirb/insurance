@@ -39,12 +39,11 @@ const getRiskProfile = (args) => {
     life: baseScore,
   };
 
-  ruler.applyIneligibilityRules(
-    riskProfile,
+  ruler.applyIneligibilityRules(riskProfile, {
     income,
     vehicle,
     house,
-  );
+  });
   ruler.applyAgeRules(riskProfile, age);
   ruler.applyIncomeRules(riskProfile, income);
   ruler.applyHouseRules(riskProfile, house);

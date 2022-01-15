@@ -28,12 +28,12 @@ const applyIncomeRules = (riskProfile, income) => {
   }
 };
 
-const applyIneligibilityRules = (
-  riskProfile,
-  income,
-  vehicle,
-  house,
-) => {
+const applyIneligibilityRules = (riskProfile, args) => {
+  const {
+    income,
+    vehicle,
+    house,
+  } = args;
   if (!income) {
     riskProfile.disability = 'ineligible';
   }
