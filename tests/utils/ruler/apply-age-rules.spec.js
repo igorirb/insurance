@@ -21,7 +21,7 @@ describe('src/utils/ruler', () => {
     age = 70;
   });
 
-  describe('applyAgeRules()', () => {
+  describe('applyAgeRules(riskProfile, age)', () => {
     it('should make disability to be ineligible', () => {
       ruler.applyAgeRules(riskProfile, age);
       expect(riskProfile).to.be.deep.equal({

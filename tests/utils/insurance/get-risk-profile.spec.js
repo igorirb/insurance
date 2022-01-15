@@ -9,10 +9,10 @@ chai.use(sinonChai);
 const { expect } = chai;
 
 describe('src/utils/insurance', () => {
-  let input;
+  let args;
 
   beforeEach(() => {
-    input = {
+    args = {
       age: 35,
       dependents: 2,
       house: {
@@ -27,8 +27,8 @@ describe('src/utils/insurance', () => {
     };
   });
 
-  describe('getRiskProfile()', () => {
-    it('should process risk profile', () => {
+  describe('getRiskProfile(args)', () => {
+    it('should get risk profile', () => {
       const processRiskProfile = sinon.spy(insurance, 'processRiskProfile');
       const applyAgeRules = sinon.spy(ruler, 'applyAgeRules');
       const applyIncomeRules = sinon.spy(ruler, 'applyIncomeRules');
@@ -38,7 +38,7 @@ describe('src/utils/insurance', () => {
       const applyMaritalStatusRules = sinon.spy(ruler, 'applyMaritalStatusRules');
       const applyVehicleRules = sinon.spy(ruler, 'applyVehicleRules');
 
-      const result = insurance.getRiskProfile(input);
+      const result = insurance.getRiskProfile(args);
       expect(result).to.be.deep.equal({
         auto: 'regular',
         disability: 'ineligible',

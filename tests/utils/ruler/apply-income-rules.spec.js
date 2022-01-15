@@ -21,7 +21,7 @@ describe('src/utils/ruler', () => {
     income = 100000;
   });
 
-  describe('applyIncomeRules()', () => {
+  describe('applyIncomeRules(riskProfile, income)', () => {
     it('should do nothing', () => {
       ruler.applyIncomeRules(riskProfile, income);
       expect(riskProfile).to.be.deep.equal({

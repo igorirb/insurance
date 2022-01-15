@@ -8,10 +8,10 @@ chai.use(sinonChai);
 const { expect } = chai;
 
 describe('src/utils/insurance', () => {
-  let input;
+  let riskProfile;
 
   beforeEach(() => {
-    input = {
+    riskProfile = {
       auto: 2,
       disability: 'ineligible',
       home: -1,
@@ -19,9 +19,9 @@ describe('src/utils/insurance', () => {
     };
   });
 
-  describe('processRiskProfile()', () => {
+  describe('processRiskProfile(riskProfile)', () => {
     it('should process risk profile', () => {
-      const result = insurance.processRiskProfile(input);
+      const result = insurance.processRiskProfile(riskProfile);
       expect(result).to.be.deep.equal({
         auto: 'regular',
         disability: 'ineligible',

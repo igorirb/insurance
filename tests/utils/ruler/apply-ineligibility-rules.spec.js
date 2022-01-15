@@ -31,7 +31,7 @@ describe('src/utils/ruler', () => {
     };
   });
 
-  describe('applyIneligibilityRules()', () => {
+  describe('applyIneligibilityRules(riskProfile, args)', () => {
     it('should do nothing', () => {
       ruler.applyIneligibilityRules(riskProfile, args);
       expect(riskProfile).to.be.deep.equal({
